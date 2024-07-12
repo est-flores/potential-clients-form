@@ -121,11 +121,13 @@ const Form = () => {
         onChange={handleChange}
         name="incomes"
         placeholder="Enter incomes"
-        pattern="\d+(\.\d{2})?"
+        pattern="^[A-Za-z0-9\s,.'-]{1,}$"
       />
-      <button type="submit">Submit</button>
-      <button type="button" onClick={handleCancel}>Cancel</button>
-      <button type="button" onClick={handleReset}>Clear</button>
+      <div>
+        <button type="submit">Submit</button>
+        <button type="button" onClick={handleCancel}>Cancel</button>
+        <button type="button" onClick={handleReset}>Clear</button>
+      </div>
     </form>
   );
 };
